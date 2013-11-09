@@ -1,0 +1,24 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version 2.0.0
+
+* System dependencies Rails 4.0.0
+
+* Configuration
+
+* Database creation pg
+
+* Database initialization rake db:migrate
+
+
+#### Add Tags to Articles  
+`rails g model tag name`  
+`rails g model tagging tag:belongs_to article:belongs_to`  
+
+#### Book
+Language, Rating, Contributor, Description, Picture, Publication Date, ISBN, bType
