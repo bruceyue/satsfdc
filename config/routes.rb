@@ -1,4 +1,4 @@
-Satall::Application.routes.draw do
+Satsfdc::Application.routes.draw do
   get 'home/index'
   root :to => 'home#index'
 

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Satall::Application.load_tasks
+Satsfdc::Application.load_tasks
