@@ -59,19 +59,19 @@
                     <div class="nav-collapse collapse navbar-responsive-collapse">
                         <ul class="nav">
                             <li class="dropdown">
-                                <%= link_to "Home", home_index_path %></li>
+                                <%= link_to "Home", home_index_path %>
                             </li>
                             <li class="dropdown">
-                                <%= link_to "Articles", articles_path %></li>
+                                <%= link_to "Articles", articles_path %>
                             </li>
                             <li class="dropdown">
-                                <%= link_to "Books", books_path %></li>
+                                <%= link_to "Books", books_path %>
                             </li>
                             <li class="dropdown">
-                                <%= link_to "Cool Sites", home_coolsite_path %></li>
+                                <%= link_to "Cool Sites", home_coolsite_path %>
                             </li>
                             <li>
-                                <%= link_to "About Us", home_aboutus_path %></li>
+                                <%= link_to "About Us", home_aboutus_path %>
                             </li>
                             <li class="dropdown">
                                 <a href="" class="dropdown-toggle" data-toggle="dropdown">
@@ -79,10 +79,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Jobs</a>
+                                        <%= link_to "Jobs", sfjobs_path %>
                                     </li>
                                     <li>
-                                        <a href="#">Training</a>
+                                        <%= link_to "Training", trainings_path %>
                                     </li>
                                 </ul>
                             </li>
@@ -96,6 +96,12 @@
                                 <ul class="dropdown-menu">
                                     <li><%= link_to "New Article", new_article_path %></li>
                                     <li><%= link_to "New Book", new_book_path %></li>
+                                    <% if user_signed_in? %>
+                                        <li><%= link_to 'New Sfjob', new_sfjob_path %></li>
+                                    <% end %>
+                                    <% if user_signed_in? %>
+                                        <li><%= link_to 'New Training', new_training_path %></li>
+                                    <% end %>
                                 </ul>
                             </li>
                         </ul>

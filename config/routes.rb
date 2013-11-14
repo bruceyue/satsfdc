@@ -9,11 +9,10 @@ Satsfdc::Application.routes.draw do
 
   get 'tags/:tag', to: 'articles#index', as: :tag
 
-  resources :books
+  resources :books, :sfjobs, :trainings
 
   get 'home/aboutus'
   get 'home/coolsite'
-  
   devise_for :users
   get '/auth/:provider/callback', to: 'sessions#create', :as => :oauth_callback
   get '/auth/failure', to: 'sessions#failure'

@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
   attr_accessible :tag_ids, :comment_ids, :user_id
-  attr_accessible :body, :subject, :is_published, :picture, :comments_count, :tag_list
+  attr_accessible :body, :subject, :is_published, :picture, :comments_count, :tag_list, :created_at
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :likes

@@ -13,11 +13,11 @@
                 <h3>Create New Book</h3>
                     <%= f.text_field :name, size: 30, placeholder: "Book Name", class: "span12 required" %>
                     <%= f.text_field :contributor, placeholder: "Contributor", class: "span12" %>
-                    <%= f.text_field :publication_date, placeholder: "Publication Date", class: "span12 required", type: 'date' %>
-                    <%= f.text_area :btype, placeholder: "Type your content", rows: 25, class: "span12 clearfix required" %>
+                    <%= f.text_field :publication_date, placeholder: "Publication Date", class: "span2 required", type: 'date' %>
+                    <%= f.text_area :content, placeholder: "Type your content", rows: 25, class: "span12 clearfix required" %>
                     <%= f.submit "Create", class: "btn btn-large btn-block btn-green" %>
                 </form>
             </div>
         </div>
     <% end %>
-</div>
+</div> 

@@ -3,21 +3,22 @@
     <div class="span12 content-wrapper">
         <div class="row-fluid content-home">
             <div class="span12">
-                <% @books.each do |book| %>
+                <% @sfjobs.each do |job| %>
                     <div class="row-fluid">
                         <div class="span12 blog-content">
                             <div class="page-header">
-                                <h2><%= book.name %></h2>
+                                <h2><%= job.name %></h2>
                             </div>
                             <small class="meta-date">
-                                Contributor: <%= book.contributor %> |
-                                Publication Date: <%= book.publication_date %>
+                                Company: <%= job.company %> |
+                                Publication Date: <%= job.published_date %> |
+                                Price: <%= job.price %>
                             </small>
                             <p>
-                                <%= markdown(book.content).truncate(1800, :omission => "......").html_safe %><br/>
+                                <%= markdown(job.description).truncate(800, :omission => "......").html_safe %><br/>
                             </p>
                             <p>
-                                <%= link_to 'Read More...', book, class: 'btn btn-green'%>
+                                <%= link_to 'More...', job, class: 'btn btn-green'%>
                             </p>
                         </div>
                     </div>
@@ -32,8 +33,9 @@
 <div class="row-fluid">
     <div class="span12">
         <div class="pagination pagination-centered">
-            <%= will_paginate @books, previous_label: '<<', next_label: '>>' %>
+            <%= will_paginate @sfjobs, previous_label: '<<', next_label: '>>' %>
         </div>
     </div>
 </div>
 <!--end:pagination-->
+

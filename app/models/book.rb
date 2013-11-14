@@ -1,4 +1,3 @@
 class Book < ActiveRecord::Base
-  belongs_to :user
-  attr_accessible :contributor, :name, :btype, :publication_date
+  attr_accessible :ISBN, :content, :contributor, :language, :name, :picture, :publication_date, :rating
 end

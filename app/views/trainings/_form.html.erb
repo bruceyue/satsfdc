@@ -1,0 +1,25 @@
+<div class="span12">
+    <%= form_for(@training) do |f| %>
+        <% if @training.errors.any? %>
+            <% @training.errors.full_messages.each do |msg| %>
+                <div id="error_explanation" class="alert alert-error fade in span11">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong><%= msg %></strong>
+                </div>
+            <% end %>
+        <% end %>
+        <div class="row-fluid">
+            <div class="span12 coment">
+                <h3>Create New Training</h3>
+                    <%= f.text_field :name, size: 30, placeholder: "Training Name", class: "span12 required" %>
+                    <%= f.text_field :t_type, placeholder: "Type(1 Developer, 2 Advance)", class: "span12 required" %>
+                    <%= f.text_field :price, placeholder: "Price", class: "span12" %>
+                    <%= f.text_field :t_date, placeholder: "Training Date", class: "span2 required", type: 'date' %>
+                    <%= f.text_area :description, placeholder: "Description", rows: 25, class: "span12 clearfix required" %>
+                    <%= f.submit "Submit", class: "btn btn-large btn-block btn-green" %>
+                </form>
+            </div>
+        </div>
+    <% end %>
+</div>
+
