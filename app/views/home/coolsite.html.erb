@@ -16,7 +16,7 @@
                             <div id="<%= site.id %>" class="accordion-body collapse <%= n == 0 ? 'in' : '' %>">
                                 <div class="accordion-inner">
                                     <a href="<%= site.link %>" target="_blank"><i class="icon_link"></i><%= site.link %></a><br/>
-                                    <%= site.description %>
+                                    <%= markdown site.description %>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                             <div id="<%= site.id %>" class="accordion-body collapse <%= m == 0 ? 'in' : '' %>">
                                 <div class="accordion-inner">
                                     <a href="<%= site.link %>" target="_blank"><%= site.link %></a><br/>
-                                    <%= site.description %>
+                                    <%= markdown site.description %>
                                 </div>
                             </div>
                         </div>
