@@ -8,8 +8,9 @@
                         <h2><%= @book.name %></h2>
                     </div>
                     <small class="meta-date">
-                        Contributor: <%= @book.contributor %> |
+                        Contributor: <a href=""><%= @book.contributor %></a> |
                         Publication Date: <%= @book.publication_date %>
+                    </small>
                     <p>
                         <%= markdown @book.content %>
                     </p>

@@ -8,9 +8,10 @@
                         <h2><%= @sfjob.name %></h2>
                     </div>
                     <small class="meta-date">
-                        Company: <%= @sfjob.company %> |
+                        Company: <a href=""><%= @sfjob.company %></a> |
                         Publication Date: <%= @sfjob.published_date %> |
-                        Price: <%= @sfjob.price %></small>
+                        Price: <%= @sfjob.price %>
+                    </small>
                     <p>
                         <%= markdown @sfjob.description %>
                     </p>
