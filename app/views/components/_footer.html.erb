@@ -7,12 +7,9 @@
                     <h3>Popular Post</h3>
                     <ul>
                     <% if Article.order('created_at DESC').size != 0 %>
-                        <% Article.order('created_at DESC').limit(5).each do |article| %>
+                        <% Article.order('created_at DESC').limit(4).each do |article| %>
                             <li>
                                 <%= link_to article.subject, article %>
-                                <span>
-                                    <time datetime="2013-05-02"><%= article.created_at.strftime('%b %d, %Y') %> </time>
-                                </span>
                             </li>
                         <% end%>
                     <% end%>
