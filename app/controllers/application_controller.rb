@@ -50,7 +50,7 @@ class ApplicationController < ActionController::Base
 
   def setup_api_client
     @client = Databasedotcom::Client.new({})
-    @client.version = '27.0'
+    @client.version = '26.0'
     @client.authenticate :token => current_user.access_token,
                          :refresh_token => current_user.refresh_token,
                          :instance_url => current_user.instance_url
